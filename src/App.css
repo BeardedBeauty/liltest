@@ -1,3 +1,86 @@
-.App {
-  text-align: center;
+.clearfix {
+    overflow: auto;
+    width: 100%;
+}
+
+#hero {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#adBucket {
+    column-count: 3;
+    column-gap: 10px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.bottle {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+.division {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.division p {
+    font-size: 23px;
+    font-weight: bold;
+    color: #0e8117;
+    float: left;
+    margin: 0 1% 0 1%;
+    width: 14%;
+    text-align: center;
+}
+
+.lineGreen {
+    margin-top: 12px;
+    width: 42%;
+    height: 2px;
+    background-color: #0e8117;
+    float: left;
+}
+
+#productsBox {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.productImage {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    #adBucket {
+        width: 300px;
+        column-count: 1;
+    }
+
+    .bottle {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .midBottle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .division p {
+        font-size: 20px;
+        width: 36%;
+    }
+
+    .lineGreen {
+        width: 31%;
+    }
 }

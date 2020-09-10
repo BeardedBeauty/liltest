@@ -1,0 +1,27 @@
+.product {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.prodTitle {
+    font-weight: bold;
+}
+
+.prodType {
+    font-size: 13px;
+}
+
+.prodDesc {
+    font-size: 14px;
+}
+
+.price {
+    font-size: 22px;
+    color: #000000;
+}
+
+.priceBogo {
+    font-size: 22px;
+    color: #e73e3e;
+}
