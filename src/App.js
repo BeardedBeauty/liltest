@@ -17,6 +17,7 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			//State of products possibly coming from database
 			products: [
 				{
 					title: "Vitamin D3 - Highest Potency",
@@ -62,6 +63,7 @@ class App extends React.Component {
 		}
 	};
 
+	// Message alert when things are clicked on
 	message = message => alert(message);
 
 	render() {
@@ -69,6 +71,8 @@ class App extends React.Component {
 			<>
 				<div className="App">
 					<div className="container">
+
+						{/* Initial ad images and banner */}
 						<img src={hero} id="hero" alt="title" onClick={() => this.message("Discount activated!")} />
 						<div id="adBucket">
 							<img src={antidotes} alt="title" className="bottle" onClick={() => this.message("Antidotes!")} />
@@ -76,12 +80,16 @@ class App extends React.Component {
 							<img src={personalized} alt="title" className="bottle" onClick={() => this.message("Overwhelmed?")} />
 						</div>
 						<div className="clearfix"></div>
+
+						{/* you may like */}
 						<div className="division">
 							<div className="lineGreen"></div>
 							<p>You May Like</p>
 							<div className="lineGreen"></div>
 						</div>
 						<div className="clearfix"></div>
+
+						{/* Container to hold products with info from state/database */}
 						<div id="productsBox">
 							{this.state.products.map(obj => {
 								return (<Product
