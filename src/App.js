@@ -69,11 +69,11 @@ class App extends React.Component {
 			<>
 				<div className="App">
 					<div className="container">
-						<img src={hero} id="hero" onClick={() => this.message("Discount activated!")} />
+						<img src={hero} id="hero" alt="title" onClick={() => this.message("Discount activated!")} />
 						<div id="adBucket">
-							<img src={antidotes} className="bottle" onClick={() => this.message("Antidotes!")} />
-							<img src={onsale} className="bottle" onClick={() => this.message("On Sale!")} />
-							<img src={personalized} className="bottle" onClick={() => this.message("Overwhelmed?")} />
+							<img src={antidotes} alt="title" className="bottle" onClick={() => this.message("Antidotes!")} />
+							<img src={onsale} alt="title" className="bottle" onClick={() => this.message("On Sale!")} />
+							<img src={personalized} alt="title" className="bottle" onClick={() => this.message("Overwhelmed?")} />
 						</div>
 						<div className="clearfix"></div>
 						<div className="division">
