@@ -59,6 +59,12 @@
     height: auto;
 }
 
+.spacer {
+    margin-top: 400px;
+    height: 100px;
+    width: 100%;
+}
+
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     #adBucket {
         width: 300px;
@@ -82,5 +88,12 @@
 
     .lineGreen {
         width: 31%;
+    }
+
+    #productsBox {
+        width: 400px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

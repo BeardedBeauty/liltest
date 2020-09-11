@@ -2,6 +2,7 @@
     width: 20%;
     float: left;
     text-align: center;
+    margin-bottom: 200px;
 }
 
 .prodTitle {
@@ -24,4 +25,49 @@
 .priceBogo {
     font-size: 22px;
     color: #e73e3e;
+}
+
+.add {
+    display: block;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #d42a2a;
+    color: #fff2f1;
+    transition: .15s;
+}
+
+.add p {
+    padding: 12px;
+}
+
+.add:hover {
+    background-color: #ffe5e3;
+    color: #680000;
+    cursor: pointer;
+}
+
+.extras {
+    margin-bottom: -450px;
+    margin-top: 320px;
+    width: 100%;
+}
+
+.bogo {
+    position: absolute;
+    padding: 8px 30px 8px 30px;
+    background-color: #9df1a4;
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    transform: rotate(90deg);
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 999px) {
+    .product {
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
 }

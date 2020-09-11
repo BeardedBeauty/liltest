@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import Product from './components/Product';
+
+// images
 import hero from "./assets/Hero.jpg";
 import antidotes from "./assets/HP_Antidotes.jpg";
 import onsale from "./assets/HP_On_Sale.jpg";
 import personalized from "./assets/HP_Personalized.jpg";
-import Product from './components/Product';
 import d3 from "./assets/SW1371.jpg";
 import zinc from "./assets/SW1113.jpg";
 import langer from "./assets/SWA051.jpg";
@@ -21,7 +23,7 @@ class App extends React.Component {
 					image: d3,
 					type: "Swanson Premium",
 					info: "5,000 IU 250 Sgels",
-					price: 10.99,
+					price: "$10.99",
 					bogo: false
 				},
 				{
@@ -29,7 +31,7 @@ class App extends React.Component {
 					image: zinc,
 					type: "Swanson Premium",
 					info: "22 mg 60 caps",
-					price: 2.59,
+					price: "$2.59",
 					bogo: false
 				},
 				{
@@ -44,8 +46,8 @@ class App extends React.Component {
 					title: "Delivery Insurance",
 					image: deliver,
 					type: "Swanson Health Products, Inc.",
-					info: "",
-					price: "1.00",
+					info: "-",
+					price: "$1.00",
 					bogo: false
 				},
 				{
@@ -64,35 +66,37 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="App" >
-				<div className="container">
-					<img src={hero} id="hero" onClick={() => this.message("Discount activated!")} />
-					<div id="adBucket">
-						<img src={antidotes} className="bottle" onClick={() => this.message("Antidotes!")} />
-						<img src={onsale} className="bottle" onClick={() => this.message("On Sale!")} />
-						<img src={personalized} className="bottle" onClick={() => this.message("Overwhelmed?")} />
-					</div>
-					<div className="clearfix"></div>
-					<div className="division">
-						<div className="lineGreen"></div>
-						<p>You May Like</p>
-						<div className="lineGreen"></div>
-					</div>
-					<div className="clearfix"></div>
-					<div id="productsBox">
-						{this.state.products.map(obj => {
-							return (<Product
-								image={obj.image}
-								title={obj.title}
-								info={obj.info}
-								price={obj.price}
-								type={obj.type}
-								bogo={obj.bogo}
-							/>)
-						})}
+			<>
+				<div className="App">
+					<div className="container">
+						<img src={hero} id="hero" onClick={() => this.message("Discount activated!")} />
+						<div id="adBucket">
+							<img src={antidotes} className="bottle" onClick={() => this.message("Antidotes!")} />
+							<img src={onsale} className="bottle" onClick={() => this.message("On Sale!")} />
+							<img src={personalized} className="bottle" onClick={() => this.message("Overwhelmed?")} />
+						</div>
+						<div className="clearfix"></div>
+						<div className="division">
+							<div className="lineGreen"></div>
+							<p>You May Like</p>
+							<div className="lineGreen"></div>
+						</div>
+						<div className="clearfix"></div>
+						<div id="productsBox">
+							{this.state.products.map(obj => {
+								return (<Product
+									image={obj.image}
+									title={obj.title}
+									info={obj.info}
+									price={obj.price}
+									type={obj.type}
+									bogo={obj.bogo}
+								/>)
+							})}
+						</div>
 					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 }
