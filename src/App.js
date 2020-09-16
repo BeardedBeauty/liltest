@@ -25,7 +25,9 @@ class App extends React.Component {
 					type: "Swanson Premium",
 					info: "5,000 IU 250 Sgels",
 					price: "$10.99",
-					bogo: false
+					bogo: false,
+					rating: 4.5,
+					reviews: 440
 				},
 				{
 					title: "Zinc Picolinate - Body Preferred Form",
@@ -33,7 +35,9 @@ class App extends React.Component {
 					type: "Swanson Premium",
 					info: "22 mg 60 caps",
 					price: "$2.59",
-					bogo: false
+					bogo: false,
+					rating: 4.6,
+					reviews: 95
 				},
 				{
 					title: "Dr. Stephen Langer's Ultimate 16 Day Strain Probiotic with FOS",
@@ -41,7 +45,9 @@ class App extends React.Component {
 					type: "Swanson Probiotics",
 					info: "3.2 Billion CFU 60 Veg Drcaps",
 					price: "2 for $14.79",
-					bogo: true
+					bogo: true,
+					rating: 4.6,
+					reviews: 823
 				},
 				{
 					title: "Delivery Insurance",
@@ -49,7 +55,9 @@ class App extends React.Component {
 					type: "Swanson Health Products, Inc.",
 					info: "-",
 					price: "$1.00",
-					bogo: false
+					bogo: false,
+					rating: 4.5,
+					reviews: 78
 				},
 				{
 					title: "Tumeric & Black Pepper",
@@ -57,7 +65,9 @@ class App extends React.Component {
 					type: "Swanson Premium",
 					info: "60 Veg Caps",
 					price: "2 for $13.99",
-					bogo: true
+					bogo: true,
+					rating: 5,
+					reviews: 238
 				}
 			]
 		}
@@ -70,9 +80,7 @@ class App extends React.Component {
 		return (
 			<>
 				<div className="App">
-					<div className="container">
-
-						{/* Initial ad images and banner */}
+					<div className="container2">
 						<img src={hero} id="hero" alt="title" onClick={() => this.message("Discount activated!")} />
 						<div id="adBucket">
 							<img src={antidotes} alt="title" className="bottle" onClick={() => this.message("Antidotes!")} />
@@ -80,15 +88,15 @@ class App extends React.Component {
 							<img src={personalized} alt="title" className="bottle" onClick={() => this.message("Overwhelmed?")} />
 						</div>
 						<div className="clearfix"></div>
+					</div>
 
-						{/* you may like */}
-						<div className="division">
-							<div className="lineGreen"></div>
-							<p>You May Like</p>
-							<div className="lineGreen"></div>
-						</div>
-						<div className="clearfix"></div>
-
+					{/* you may like */}
+					<div className="division">
+						<p>You May Like</p>
+					</div>
+					<div className="clearfix"></div>
+					<div className="lineGreen"></div>
+					<div className="container2">
 						{/* Container to hold products with info from state/database */}
 						<div id="productsBox">
 							{this.state.products.map(obj => {
@@ -99,6 +107,8 @@ class App extends React.Component {
 									price={obj.price}
 									type={obj.type}
 									bogo={obj.bogo}
+									rate={obj.rating}
+									review={obj.reviews}
 								/>)
 							})}
 						</div>

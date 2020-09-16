@@ -1,24 +1,36 @@
 import React from "react";
 import './style.css';
+import "./stars.scss";
 
 function Product(props) {
+    // All product info comes from App.js State
     return (
         <div className="product">
-            <div className="extras">
+            {/* product image */}
+            {props.bogo && <div className="bogo">BOGO</div>}
+            <img src={props.image} className="productImage" alt="prodimg" />
 
-                {/* product descriptions */}
+            {/* Rating */}
+            <div className="ratingBox">
+                <div className="ratecontainercenter">
+                    <div className="Stars" style={{ "--rating": props.rate }}></div>
+                    <div className="reviews">{`(${props.review})`}</div>
+                </div>
+            </div>
+            <div className="clearfix"></div>
+
+            {/* Titles */}
+            <p className="prodType">{props.type}</p>
+            <p className="prodTitle">{props.title}</p>
+
+            {/* product descriptions */}
+            <div className="extras">
                 <p className="prodDesc">{props.info}</p>
                 <p className={props.bogo ? "priceBogo" : "price"}>{props.price}</p>
                 <div className="add" onClick={() => alert(`"${props.title}" has been added to your cart`)}>
                     <p>add to cart</p>
                 </div>
             </div>
-
-            {/* Image and title */}
-            {props.bogo && <div className="bogo">BOGO</div>}
-            <img src={props.image} className="productImage" alt="prodimg" />
-            <p className="prodType">{props.type}</p>
-            <p className="prodTitle">{props.title}</p>
         </div>
     )
 }
