@@ -26,7 +26,7 @@ class App extends React.Component {
 					info: "5,000 IU 250 Sgels",
 					price: "$10.99",
 					bogo: false,
-					rating: 4.5,
+					rating: 4.3,
 					reviews: 440
 				},
 				{
@@ -46,7 +46,7 @@ class App extends React.Component {
 					info: "3.2 Billion CFU 60 Veg Drcaps",
 					price: "2 for $14.79",
 					bogo: true,
-					rating: 4.6,
+					rating: 4.4,
 					reviews: 823
 				},
 				{
