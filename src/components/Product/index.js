@@ -19,8 +19,10 @@ function Product(props) {
             </div>
 
             {/* Titles */}
-            <p className="prodType">{props.type}</p>
-            <p className="prodTitle">{props.title}</p>
+            <div className="titles">
+                <p className="prodType">{props.type}</p>
+                <p className="prodTitle">{props.title}</p>
+            </div>
 
             {/* product descriptions */}
             <div className="extras">

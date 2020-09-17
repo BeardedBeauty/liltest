@@ -95,6 +95,12 @@
     float: right;
 }
 
+.titles:hover p {
+    color: #0e8117;
+    transition: .2s;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 999px) {
     /* .product {
         margin-top: 30px;
