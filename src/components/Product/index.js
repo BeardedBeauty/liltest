@@ -12,12 +12,11 @@ function Product(props) {
 
             {/* Rating */}
             <div className="ratingBox">
-                <div className="ratecontainercenter">
+                <div className="ratecontainercenter" onClick={() => alert(`${props.review} reviews with an average of ${props.rate} stars`)}>
                     <div className="Stars" style={{ "--rating": props.rate }}></div>
                     <div className="reviews">{`(${props.review})`}</div>
                 </div>
             </div>
-            <div className="clearfix"></div>
 
             {/* Titles */}
             <p className="prodType">{props.type}</p>
